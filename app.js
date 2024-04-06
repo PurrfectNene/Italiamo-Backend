@@ -17,8 +17,12 @@ require("./config")(app);
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 const regionRoutes= require("./routes/regions.routes")
+const citiesRoutes= require("./routes/cities.routes")
+const placesRoutes= require("./routes/places.routes")
 app.use("/api", indexRoutes);
 app.use("/api", regionRoutes)
+app.use("/api", citiesRoutes)
+app.use("/api", placesRoutes)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

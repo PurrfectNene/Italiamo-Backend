@@ -18,7 +18,7 @@ router.get("/regions/:regionId", (req,res,next)=>{
     const {regionId} = req.params
 
     if (!mongoose.Types.ObjectId.isValid(regionId)) {
-        res.status(400).json({ message: "Specified id is not valid" });
+        res.status(400).json({ message: "Specified region id is not valid" });
         return;
       }
 
@@ -50,4 +50,5 @@ router.get("/regions/:regionId/cities", (req, res, next) => {
       .catch((err) => next(err));
   });
 
+  
 module.exports = router
