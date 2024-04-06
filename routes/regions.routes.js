@@ -3,6 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose')
 
 const Region= require('../models/Region.model')
+const City = require("../models/City.model");
 
 router.get("/regions", (req, res, next) =>{
 
