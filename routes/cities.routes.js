@@ -40,6 +40,7 @@ router.get("/cities/:cityId/places",(req,res,next)=>{
     const { cityId } = req.params
 
     Place.find({ city: cityId })
+    .populate("city")
     .then((allPlaces)=>res.json(allPlaces))
     .catch((err)=> next(err))
 
@@ -60,7 +61,7 @@ router.get("/cities/:cityId/places/:placeId",(req,res,next)=>{
 })
 
 
-// CREATING A POST REQUEST TO TEST
+// CREATING A POST AND PUT REQUEST TO TEST
 
 router.post("/cities", (req, res, next) => {
     const { region, name, description } = req.body
@@ -84,8 +85,43 @@ router.post("/cities", (req, res, next) => {
         })
         .catch(error => {
             res.status(400).json({ message: error.message })
-        });
-});
+        })
+})
+
+router.put("/cities/:cityId", (req, res, next) => {
+    const { cityId } = req.params
+    const { region, name, description } = req.body
+
+    if (!mongoose.Types.ObjectId.isValid(cityId)) {
+        return res.status(400).json({ message: "Invalid city ID" })
+    }
+
+    City.findById(cityId)
+        .then(existingCity => {
+            if (!existingCity) {
+                return res.status(404).json({ message: "City not found" })
+            }
+
+            if (region) {
+                existingCity.region = region
+            }
+            if (name) {
+                existingCity.name = name
+            }
+            if (description) {
+                existingCity.description = description
+            }
+
+            return existingCity.save()
+        })
+        .then(updatedCity => {
+            res.json(updatedCity)
+        })
+        .catch(error => {
+            next(error)
+        })
+})
+
 
 
 
