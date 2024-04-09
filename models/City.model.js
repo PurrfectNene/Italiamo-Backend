@@ -14,7 +14,11 @@ const citySchema = new Schema(
         description: {
             type: String
         }
-    }
+    },
+    {
+        // this second object adds extra properties: `createdAt` and `updatedAt`    
+        timestamps: true
+      }
 )
 
 module.exports=model("City", citySchema)
