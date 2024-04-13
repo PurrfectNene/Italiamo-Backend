@@ -4,6 +4,8 @@ const User = require("../models/User.model");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 
+const { isAuthenticated } = require("../middleware/jwt.middleware");
+
 const saltRounds = 10;
 
 router.post("/register", (req, res, next) => {
@@ -95,6 +97,12 @@ router.post('/login',(req, res, next)=>{
       .catch(err => {res.status(500).json(err)
         console.log(err)});
   
+})
+
+router.get('/verify', isAuthenticated, (req, res, next) => {
+  console.log(`req.payload`, req.payload);
+
+  res.status(200).json(req.payload);
 })
 
 

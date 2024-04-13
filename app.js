@@ -15,6 +15,8 @@ const app = express();
 require("./config")(app);
 
 // 👇 Start handling routes here
+const { isAuthenticated } = require("./middleware/jwt.middleware");
+
 const indexRoutes = require("./routes/index.routes");
 const regionRoutes= require("./routes/regions.routes")
 const citiesRoutes= require("./routes/cities.routes")
