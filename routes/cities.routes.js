@@ -123,6 +123,27 @@ router.put("/cities/:cityId", (req, res, next) => {
 })
 
 
+router.delete("/cities/:cityId", (req, res, next) => {
+    const { cityId } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(cityId)) {
+        return res.status(400).json({ message: "Invalid city ID" });
+    }
+
+    console.log(cityId)
+
+
+    City.findByIdAndDelete(cityId)
+        .then(deletedCity => {
+            if (!deletedCity) {
+                return res.status(404).json({ message: "City not found" });
+            }
+            res.json({ message: "City deleted successfully", deletedCity });
+        })
+        .catch(error => {
+            next(error);
+        });
+});
 
 
 
