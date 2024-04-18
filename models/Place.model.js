@@ -13,7 +13,7 @@ const placeSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ["Food", "Cultural"],
+        enum: ["Food&Wine", "Cultural", "Relax&Wellness", "Villages", "Nature"],
         required: true
     }
 },
