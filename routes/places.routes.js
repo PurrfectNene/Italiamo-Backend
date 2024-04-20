@@ -5,6 +5,16 @@ const mongoose = require('mongoose')
 const Place = require("../models/Place.model")
 const City = require("../models/City.model")
 
+router.get("/places", (req, res, next) => {
+    Place.find()
+        .populate('city')
+        .then(places => {
+            res.json(places);
+        })
+        .catch(error => {
+            next(error);
+        });
+});
 
 
 router.post("/places", (req, res, next) => {
