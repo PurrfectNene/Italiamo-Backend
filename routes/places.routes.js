@@ -5,10 +5,14 @@ const mongoose = require('mongoose')
 const Place = require("../models/Place.model")
 const City = require("../models/City.model")
 
+const fileUploader = require("../config/cloudinary.config");
 
 
-router.post("/places", (req, res, next) => {
+
+
+router.post("/places", fileUploader.single("imgUrl"), (req, res, next) => {
     const { name, city, description, type } = req.body
+    const imgUrl = req.file.path
 
     City.findOne({ name: city })
         .then(existingCity => {
@@ -20,7 +24,8 @@ router.post("/places", (req, res, next) => {
                 name,
                 city: existingCity._id,
                 description,
-                type
+                type,
+                imgUrl
             })
 
             return newPlace.save()
@@ -31,6 +36,16 @@ router.post("/places", (req, res, next) => {
         .catch(error => {
             next(error)
         })
+})
+
+router.post("/places-upload", fileUploader.single("imgUrl"), (req, res, next) => {
+   
+    if (!req.file) {
+        next(new Error("No file uploaded!"));
+        return;
+    }
+
+    res.json({imgUrl: req.file.path}); //"imgUrl" is the ref for front-end
 })
 
 
