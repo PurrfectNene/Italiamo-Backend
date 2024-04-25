@@ -15,6 +15,10 @@ const placeSchema = new Schema({
         type: String,
         enum: ["Food&Wine", "Cultural", "Relax&Wellness", "Villages", "Nature"],
         required: true
+    },
+    imageUrl:{
+        type:String,
+        required: true
     }
 },
 {

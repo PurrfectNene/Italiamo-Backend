@@ -22,6 +22,7 @@ const regionRoutes= require("./routes/regions.routes")
 const citiesRoutes= require("./routes/cities.routes")
 const placesRoutes= require("./routes/places.routes")
 const authRoutes= require('./routes/auth.routes')
+
 app.use("/api", indexRoutes);
 app.use("/api", regionRoutes)
 app.use("/api", citiesRoutes)

@@ -1,563 +1,714 @@
-[
-    {
-      "name": "Aosta",
-      "region": "66116c9c743a3cdc8af7908c",
-      "description": "Aosta is a city in the Valle d'Aosta region, known for its Roman and medieval landmarks, surrounded by the Italian Alps."
-    },
-    {
-      "name": "Alessandria",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Alessandria is a city in Piedmont, Italy, characterized by its historic city center, museums, and cultural heritage."
-    },
-    {
-      "name": "Asti",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Asti is a city in Piedmont, Italy, renowned for its wine production, medieval architecture, and vibrant festivals."
-    },
-    {
-      "name": "Biella",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Biella is a city in Piedmont, Italy, celebrated for its textile industry, scenic landscapes, and historical sites."
-    },
-    {
-      "name": "Cuneo",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Cuneo is a city in Piedmont, Italy, famous for its architecture, culinary delights, and picturesque surroundings."
-    },
-    {
-      "name": "Novara",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Novara is a city in Piedmont, Italy, recognized for its historic landmarks, vibrant culture, and lively atmosphere."
-    },
-    {
-      "name": "Torino",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Torino (Turin) is the capital city of Piedmont, Italy, renowned for its rich history, art galleries, and iconic architecture."
-    },
-    {
-      "name": "Verbania",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Verbania is a city in Piedmont, Italy, located on the shores of Lake Maggiore, offering scenic views and outdoor activities."
-    },
-    {
-      "name": "Vercelli",
-      "region": "66116c9c743a3cdc8af79085",
-      "description": "Vercelli is a city in Piedmont, Italy, known for its rice production, historical heritage, and cultural events."
-    },
-    {
-      "name": "Genova",
-      "region": "66116c9c743a3cdc8af79081",
-      "description": "Genova (Genoa) is the capital city of Liguria, Italy, famed for its historic port, stunning architecture, and vibrant culture."
-    },
-    {
-      "name": "Imperia",
-      "region": "66116c9c743a3cdc8af79081",
-      "description": "Imperia is a city in Liguria, Italy, renowned for its picturesque coastline, historic old town, and delicious cuisine."
-    },
-    {
-      "name": "Savona",
-      "region": "66116c9c743a3cdc8af79081",
-      "description": "Savona is a city in Liguria, Italy, characterized by its beautiful beaches, medieval landmarks, and lively atmosphere."
-    },
-    {
-      "name": "La Spezia",
-      "region": "66116c9c743a3cdc8af79081",
-      "description": "La Spezia is a city in Liguria, Italy, known as the gateway to the Cinque Terre, offering stunning coastal scenery and vibrant markets."
-    },
-    {
-      "name": "Bergamo",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Bergamo is a city in Lombardy, Italy, famous for its medieval old town, Renaissance architecture, and stunning vistas."
-    },
-    {
-      "name": "Brescia",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Brescia is a city in Lombardy, Italy, renowned for its Roman ruins, medieval squares, and vibrant cultural scene."
-    },
-    {
-      "name": "Como",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Como is a city in Lombardy, Italy, famed for its picturesque setting on Lake Como, historic architecture, and scenic funicular rides."
-    },
-    {
-      "name": "Cremona",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Cremona is a city in Lombardy, Italy, known for its violin-making tradition, Renaissance architecture, and vibrant cultural life."
-    },
-    {
-      "name": "Lecco",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Lecco is a city in Lombardy, Italy, located on the shores of Lake Como, offering stunning scenery, outdoor activities, and cultural attractions."
-    },
-    {
-      "name": "Lodi",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Lodi is a city in Lombardy, Italy, renowned for its Romanesque cathedral, medieval old town, and vibrant agricultural heritage."
-    },
-    {
-      "name": "Mantova",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Mantova (Mantua) is a city in Lombardy, Italy, famed for its Renaissance architecture, artistic heritage, and picturesque lakeside setting."
-    },
-    {
-      "name": "Milano",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Milano (Milan) is the capital city of Lombardy, Italy, renowned for its fashion, design, art, and historic landmarks like the Duomo and La Scala."
-    },
-    {
-      "name": "Monza",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Monza is a city in Lombardy, Italy, famous for its Formula 1 circuit, historic Royal Villa, and lush parks."
-    },
-    {
-      "name": "Pavia",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Pavia is a city in Lombardy, Italy, renowned for its prestigious university, medieval landmarks, and charming riverside setting."
-    },
-    {
-      "name": "Sondrio",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Sondrio is a city in Lombardy, Italy, nestled in the Alps, offering outdoor adventures, scenic beauty, and cultural delights."
-    },
-    {
-      "name": "Varese",
-      "region": "66116c9c743a3cdc8af79082",
-      "description": "Varese is a city in Lombardy, Italy, known for its lakeside setting, lush gardens, and proximity to the scenic Lake Maggiore and Lake Como."
-    },
-    {
-      "name": "Bolzano",
-      "region": "66116c9c743a3cdc8af7908a",
-      "description": "Bolzano (Bozen) is the capital city of South Tyrol, Italy, famed for its blend of Italian and Austrian culture, alpine scenery, and outdoor activities."
-    },
-    {
-      "name": "Trento",
-      "region": "66116c9c743a3cdc8af7908a",
-      "description": "Trento is the capital city of Trentino, Italy, celebrated for its historic old town, Renaissance architecture, and stunning mountain landscapes."
-    },
-    {
-      "name": "Belluno",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Belluno is a city in Veneto, Italy, nestled in the Dolomites, offering breathtaking mountain vistas, outdoor activities, and cultural treasures."
-    },
-    {
-      "name": "Padova",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Padova (Padua) is a city in Veneto, Italy, renowned for its historic university, frescoed Scrovegni Chapel, and charming old town."
-    },
-    {
-      "name": "Rovigo",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Rovigo is a city in Veneto, Italy, known for its picturesque canals, historic architecture, and vibrant cultural scene."
-    },
-    {
-      "name": "Treviso",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Treviso is a city in Veneto, Italy, celebrated for its medieval old town, picturesque canals, and renowned Prosecco wine."
-    },
-    {
-      "name": "Venezia",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Venezia (Venice) is the capital city of Veneto, Italy, famed for its romantic canals, historic architecture, and vibrant Carnival celebrations."
-    },
-    {
-      "name": "Verona",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Verona is a city in Veneto, Italy, known for its well-preserved Roman amphitheater, romantic atmosphere, and association with Shakespeare's Romeo and Juliet."
-    },
-    {
-      "name": "Vicenza",
-      "region": "66116c9c743a3cdc8af7908d",
-      "description": "Vicenza is a city in Veneto, Italy, celebrated for its Palladian architecture, UNESCO-listed historic center, and vibrant cultural scene."
-    },
-    {
-      "name": "Gorizia",
-      "region": "66116c9c743a3cdc8af7907f",
-      "description": "Gorizia is a city in Friuli-Venezia Giulia, Italy, known for its medieval castle, cultural events, and location on the border with Slovenia."
-    },
-    {
-      "name": "Pordenone",
-      "region": "66116c9c743a3cdc8af7907f",
-      "description": "Pordenone is a city in Friuli-Venezia Giulia, Italy, celebrated for its medieval architecture, lively festivals, and thriving cultural scene."
-    },
-    {
-      "name": "Trieste",
-      "region": "66116c9c743a3cdc8af7907f",
-      "description": "Trieste is the capital city of Friuli-Venezia Giulia, Italy, known for its scenic waterfront, diverse cultural heritage, and cosmopolitan atmosphere."
-    },
-    {
-      "name": "Udine",
-      "region": "66116c9c743a3cdc8af7907f",
-      "description": "Udine is a city in Friuli-Venezia Giulia, Italy, famed for its historic architecture, vibrant piazzas, and thriving art scene."
-    },
-    {
-      "name": "Bologna",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Bologna is the capital city of Emilia-Romagna, Italy, renowned for its historic university, rich culinary tradition, and beautiful medieval architecture."
-    },
-    {
-      "name": "Cesena",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Cesena is a city in Emilia-Romagna, Italy, known for its medieval fortress, vibrant markets, and lively cultural scene."
-    },
-    {
-      "name": "Ferrara",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Ferrara is a city in Emilia-Romagna, Italy, celebrated for its well-preserved Renaissance architecture, charming old town, and cultural events."
-    },
-    {
-      "name": "Forlì",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Forlì is a city in Emilia-Romagna, Italy, known for its medieval fortress, art galleries, and lively nightlife."
-    },
-    {
-      "name": "Modena",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Modena is a city in Emilia-Romagna, Italy, famed for its culinary heritage, UNESCO-listed cathedral, and vibrant cultural scene."
-    },
-    {
-      "name": "Parma",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Parma is a city in Emilia-Romagna, Italy, renowned for its rich culinary tradition, elegant architecture, and artistic heritage."
-    },
-    {
-      "name": "Piacenza",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Piacenza is a city in Emilia-Romagna, Italy, known for its Romanesque architecture, vibrant street markets, and cultural events."
-    },
-    {
-      "name": "Ravenna",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Ravenna is a city in Emilia-Romagna, Italy, famed for its Byzantine mosaics, UNESCO-listed monuments, and vibrant cultural scene."
-    },
-    {
-      "name": "Reggio Emilia",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Reggio Emilia is a city in Emilia-Romagna, Italy, known for its culinary delights, historic architecture, and vibrant cultural festivals."
-    },
-    {
-      "name": "Rimini",
-      "region": "66116c9c743a3cdc8af7907e",
-      "description": "Rimini is a city in Emilia-Romagna, Italy, celebrated for its sandy beaches, Roman ruins, and lively nightlife."
-    },
-    {
-      "name": "Arezzo",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Arezzo is a city in Tuscany, Italy, renowned for its medieval architecture, vibrant arts scene, and picturesque countryside."
-    },
-    {
-      "name": "Carrara",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Carrara is a city in Tuscany, Italy, famed for its marble quarries, stunning sculptures, and artistic heritage."
-    },
-    {
-      "name": "Firenze",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Firenze (Florence) is the capital city of Tuscany, Italy, renowned for its Renaissance art, iconic landmarks, and rich cultural heritage."
-    },
-    {
-      "name": "Grosseto",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Grosseto is a city in Tuscany, Italy, known for its medieval walls, Etruscan artifacts, and beautiful coastal landscapes."
-    },
-    {
-      "name": "Livorno",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Livorno is a city in Tuscany, Italy, famed for its port, seafood cuisine, and picturesque canals."
-    },
-    {
-      "name": "Lucca",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Lucca is a city in Tuscany, Italy, celebrated for its well-preserved Renaissance walls, cobblestone streets, and charming piazzas."
-    },
-    {
-      "name": "Massa",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Massa is a city in Tuscany, Italy, known for its historic palaces, scenic landscapes, and proximity to the Apuan Alps."
-    },
-    {
-      "name": "Pisa",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Pisa is a city in Tuscany, Italy, famed for its iconic Leaning Tower, historic university, and charming riverside setting."
-    },
-    {
-      "name": "Pistoia",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Pistoia is a city in Tuscany, Italy, known for its well-preserved medieval architecture, vibrant markets, and cultural events."
-    },
-    {
-      "name": "Prato",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Prato is a city in Tuscany, Italy, renowned for its textile industry, historic monuments, and lively cultural scene."
-    },
-    {
-      "name": "Siena",
-      "region": "66116c9c743a3cdc8af79089",
-      "description": "Siena is a city in Tuscany, Italy, famed for its medieval architecture, historic horse race (Palio), and artistic heritage."
-    },
-    {
-      "name": "Ancona",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Ancona is a city in Marche, Italy, known for its historic harbor, ancient Roman arch, and picturesque seaside promenade."
-    },
-    {
-      "name": "Ascoli Piceno",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Ascoli Piceno is a city in Marche, Italy, celebrated for its well-preserved historic center, Renaissance architecture, and vibrant street life."
-    },
-    {
-      "name": "Fermo",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Fermo is a city in Marche, Italy, known for its medieval architecture, lively piazzas, and scenic views of the surrounding countryside."
-    },
-    {
-      "name": "Macerata",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Macerata is a city in Marche, Italy, renowned for its historic university, medieval old town, and cultural events."
-    },
-    {
-      "name": "Pesaro",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Pesaro is a city in Marche, Italy, famed for its sandy beaches, cultural festivals, and well-preserved Renaissance architecture."
-    },
-    {
-      "name": "Urbino",
-      "region": "66116c9c743a3cdc8af79083",
-      "description": "Urbino is a city in Marche, Italy, known for its well-preserved Renaissance architecture, historic university, and artistic heritage."
-    },
-    {
-      "name": "Perugia",
-      "region": "66116c9c743a3cdc8af7907c",
-      "description": "Perugia is the capital city of Umbria, Italy, renowned for its medieval architecture, vibrant cultural scene, and delicious chocolates."
-    },
-    {
-      "name": "Terni",
-      "region": "66116c9c743a3cdc8af7907c",
-      "description": "Terni is a city in Umbria, Italy, known for its industrial heritage, ancient Roman ruins, and scenic landscapes."
-    },
-    {
-      "name": "Frosinone",
-      "region": "66116c9c743a3cdc8af79080",
-      "description": "Frosinone is a city in Lazio, Italy, famed for its ancient Roman ruins, historic landmarks, and scenic countryside."
-    },
-    {
-      "name": "Latina",
-      "region": "66116c9c743a3cdc8af79080",
-      "description": "Latina is a city in Lazio, Italy, known for its modern architecture, scenic coastline, and cultural events."
-    },
-    {
-      "name": "Rieti",
-      "region": "66116c9c743a3cdc8af79080",
-      "description": "Rieti is a city in Lazio, Italy, celebrated for its historic center, picturesque landscapes, and outdoor recreational activities."
-    },
-    {
-      "name": "Roma",
-      "region": "66116c9c743a3cdc8af79080",
-      "description": "Roma (Rome) is the capital city of Italy and Lazio region, renowned for its ancient ruins, Vatican City, and vibrant street life."
-    },
-    {
-      "name": "Viterbo",
-      "region": "66116c9c743a3cdc8af79080",
-      "description": "Viterbo is a city in Lazio, Italy, known for its well-preserved medieval center, thermal baths, and Etruscan heritage."
-    },
-    {
-      "name": "L'Aquila",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "L'Aquila is the capital city of Abruzzo, Italy, famed for its medieval architecture, Renaissance art, and picturesque mountain landscapes."
-    },
-    {
-      "name": "Chieti",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Chieti is a city in Abruzzo, Italy, known for its historic landmarks, lively piazzas, and panoramic views of the surrounding countryside."
-    },
-    {
-      "name": "Pescara",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Pescara is a city in Abruzzo, Italy, celebrated for its sandy beaches, vibrant nightlife, and cultural events."
-    },
-    {
-      "name": "Teramo",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Teramo is a city in Abruzzo, Italy, known for its medieval architecture, scenic landscapes, and delicious cuisine."
-    },
-    {
-      "name": "Campobasso",
-      "region": "66116c9c743a3cdc8af79084",
-      "description": "Campobasso is a city in Molise, Italy, renowned for its medieval old town, scenic hilltop location, and traditional cuisine."
-    },
-    {
-      "name": "Isernia",
-      "region": "66116c9c743a3cdc8af79084",
-      "description": "Isernia is a city in Molise, Italy, known for its archaeological sites, historic landmarks, and scenic natural beauty."
-    },
-    {
-      "name": "Andria",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Andria is a city in Apulia, Italy, celebrated for its medieval castles, ancient ruins, and olive oil production."
-    },
-    {
-      "name": "Bari",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Bari is the capital city of Apulia, Italy, known for its historic old town, medieval architecture, and vibrant seaside promenade."
-    },
-    {
-      "name": "Barletta",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Barletta is a city in Apulia, Italy, famed for its medieval castle, historic churches, and lively festivals."
-    },
-    {
-      "name": "Brindisi",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Brindisi is a city in Apulia, Italy, known for its historic port, Roman ruins, and picturesque seafront."
-    },
-    {
-      "name": "Foggia",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Foggia is a city in Apulia, Italy, celebrated for its Romanesque architecture, historic churches, and bustling markets."
-    },
-    {
-      "name": "Lecce",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Lecce is a city in Apulia, Italy, renowned for its Baroque architecture, historic center, and lively cultural scene."
-    },
-    {
-      "name": "Taranto",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Taranto is a city in Apulia, Italy, known for its historic port, ancient ruins, and beautiful beaches."
-    },
-    {
-      "name": "Trani",
-      "region": "66116c9c743a3cdc8af79086",
-      "description": "Trani is a city in Apulia, Italy, famed for its medieval architecture, picturesque harbor, and fresh seafood."
-    },
-    {
-      "name": "Avellino",
-      "region": "66116c9c743a3cdc8af79087",
-      "description": "Avellino is a city in Campania, Italy, known for its historic landmarks, beautiful landscapes, and delicious cuisine."
-    },
-    {
-      "name": "Benevento",
-      "region": "66116c9c743a3cdc8af79087",
-      "description": "Benevento is a city in Campania, Italy, celebrated for its Roman ruins, medieval architecture, and vibrant cultural scene."
-    },
-    {
-      "name": "Caserta",
-      "region": "66116c9c743a3cdc8af79087",
-      "description": "Caserta is a city in Campania, Italy, renowned for its UNESCO-listed Royal Palace, historic center, and lush gardens."
-    },
-    {
-      "name": "Napoli",
-      "region": "66116c9c743a3cdc8af79087",
-      "description": "Napoli (Naples) is the capital city of Campania, Italy, famed for its rich history, art, culture, and mouthwatering Neapolitan cuisine."
-    },
-    {
-      "name": "Salerno",
-      "region": "66116c9c743a3cdc8af79087",
-      "description": "Salerno is a city in Campania, Italy, known for its historic center, beautiful seaside promenade, and vibrant nightlife."
-    },
-    {
-      "name": "Matera",
-      "region": "66116c9c743a3cdc8af7907b",
-      "description": "Matera is a city in Basilicata, Italy, famed for its ancient cave dwellings, historic churches, and stunning Sassi di Matera."
-    },
-    {
-      "name": "Potenza",
-      "region": "66116c9c743a3cdc8af7907b",
-      "description": "Potenza is the capital city of Basilicata, Italy, known for its historic center, panoramic views, and cultural events."
-    },
-    {
-      "name": "Catanzaro",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Catanzaro is the capital city of Calabria, Italy, celebrated for its historic landmarks, panoramic views, and lively festivals."
-    },
-    {
-      "name": "Cosenza",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Cosenza is a city in Calabria, Italy, renowned for its medieval old town, historic university, and scenic surroundings."
-    },
-    {
-      "name": "Crotone",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Crotone is a city in Calabria, Italy, known for its ancient ruins, beautiful beaches, and rich archaeological heritage."
-    },
-    {
-      "name": "Reggio Calabria",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Reggio Calabria is a city in Calabria, Italy, famed for its stunning seafront promenade, ancient artifacts, and vibrant culture."
-    },
-    {
-      "name": "Vibo Valentia",
-      "region": "66116c9c743a3cdc8af7907a",
-      "description": "Vibo Valentia is a city in Calabria, Italy, celebrated for its historic landmarks, beautiful beaches, and picturesque landscapes."
-    },
-    {
-      "name": "Agrigento",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Agrigento is a city in Sicily, Italy, renowned for its Valley of the Temples, stunning beaches, and rich archaeological heritage."
-    },
-    {
-      "name": "Caltanissetta",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Caltanissetta is a city in Sicily, Italy, known for its historic architecture, cultural events, and delicious Sicilian cuisine."
-    },
-    {
-      "name": "Catania",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Catania is a city in Sicily, Italy, famed for its Baroque architecture, vibrant street markets, and majestic Mount Etna."
-    },
-    {
-      "name": "Enna",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Enna is a city in Sicily, Italy, celebrated for its hilltop location, panoramic views, and rich historical heritage."
-    },
-    {
-      "name": "Messina",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Messina is a city in Sicily, Italy, known for its historic landmarks, picturesque harbor, and panoramic views of the Strait of Messina."
-    },
-    {
-      "name": "Palermo",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Palermo is the capital city of Sicily, Italy, renowned for its rich history, cultural diversity, and stunning architectural landmarks."
-    },
-    {
-      "name": "Ragusa",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Ragusa is a city in Sicily, Italy, famed for its Baroque architecture, historic center, and delicious Sicilian cuisine."
-    },
-    {
-      "name": "Siracusa",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Siracusa (Syracuse) is a city in Sicily, Italy, known for its ancient Greek ruins, historic center, and picturesque waterfront."
-    },
-    {
-      "name": "Trapani",
-      "region": "66116c9c743a3cdc8af79088",
-      "description": "Trapani is a city in Sicily, Italy, celebrated for its historic old town, beautiful beaches, and delicious seafood."
-    },
-    {
-      "name": "Cagliari",
-      "region": "66116c9c743a3cdc8af7907d",
-      "description": "Cagliari is the capital city of Sardinia, Italy, known for its historic architecture, scenic harbor, and vibrant cultural scene."
-    },
-    {
-      "name": "Carbonia",
-      "region": "66116c9c743a3cdc8af7907d",
-      "description": "Carbonia is a city in Sardinia, Italy, celebrated for its coal mining heritage, historic landmarks, and scenic landscapes."
-    },
-    {
-      "name": "Nuoro",
-      "region": "66116c9c743a3cdc8af7907d",
-      "description": "Nuoro is a city in Sardinia, Italy, known for its traditional Sardinian culture, scenic landscapes, and rich artistic heritage."
-    },
-    {
-      "name": "Oristano",
-      "region": "66116c9c743a3cdc8af7907d",
-      "description": "Oristano is a city in Sardinia, Italy, renowned for its historic center, beautiful beaches, and vibrant festivals."
-    },
-    {
-      "name": "Sassari",
-      "region": "66116c9c743a3cdc8af7907d",
-      "description": "Sassari is a city in Sardinia, Italy, famed for its historic architecture, lively piazzas, and vibrant cultural scene."
-    }
-  ]
-  
+[{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af79097"
+  },
+  "name": "Aosta",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908c"
+  },
+  "description": "Valle d'Aosta is a region in northwestern Italy known for its stunning alpine scenery, charming villages, and outdoor recreational opportunities. The region offers activities such as skiing, hiking, and mountaineering. Valle d'Aosta's cuisine features dishes like fondue, fontina cheese, and carbonade.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629447/italiamo-project/cities/Aosta.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:48.270Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af7909d"
+  },
+  "name": "Turin",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79085"
+  },
+  "description": "Torino (Turin) is the capital city of Piedmont, Italy, renowned for its rich history, art galleries, and iconic architecture.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629449/italiamo-project/cities/Turin.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:49.856Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790a0"
+  },
+  "name": "Genoa",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79081"
+  },
+  "description": "Genova (Genoa) is the capital city of Liguria, Italy, famed for its historic port, stunning architecture, and vibrant culture.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629450/italiamo-project/cities/Genoa.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:50.992Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790a3"
+  },
+  "name": "La Spezia",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79081"
+  },
+  "description": "La Spezia is a city in Liguria, Italy, known as the gateway to the Cinque Terre, offering stunning coastal scenery and vibrant markets.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629451/italiamo-project/cities/La%20Spezia.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:52.486Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790a4"
+  },
+  "name": "Bergamo",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79082"
+  },
+  "description": "Bergamo is a city in Lombardy, Italy, famous for its medieval old town, Renaissance architecture, and stunning vistas.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629453/italiamo-project/cities/Bergamo.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:54.284Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790a6"
+  },
+  "name": "Como",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79082"
+  },
+  "description": "Como is a city in Lombardy, Italy, famed for its picturesque setting on Lake Como, historic architecture, and scenic funicular rides.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629455/italiamo-project/cities/Como.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:56.314Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790aa"
+  },
+  "name": "Mantua",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79082"
+  },
+  "description": "Mantova (Mantua) is a city in Lombardy, Italy, famed for its Renaissance architecture, artistic heritage, and picturesque lakeside setting.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629457/italiamo-project/cities/Mantua.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:57.831Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790ab"
+  },
+  "name": "Milan",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79082"
+  },
+  "description": "Milano (Milan) is the capital city of Lombardy, Italy, renowned for its fashion, design, art, and historic landmarks like the Duomo and La Scala.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629459/italiamo-project/cities/Milan.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:10:59.850Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b0"
+  },
+  "name": "Bolzano",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908a"
+  },
+  "description": "Bolzano (Bozen) is the capital city of South Tyrol, Italy, famed for its blend of Italian and Austrian culture, alpine scenery, and outdoor activities.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629461/italiamo-project/cities/Bolzano.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:01.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b3"
+  },
+  "name": "Padua",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908d"
+  },
+  "description": "Padova (Padua) is a city in Veneto, Italy, renowned for its historic university, frescoed Scrovegni Chapel, and charming old town.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629462/italiamo-project/cities/Padua.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:03.230Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b5"
+  },
+  "name": "Treviso",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908d"
+  },
+  "description": "Treviso is a city in Veneto, Italy, celebrated for its medieval old town, picturesque canals, and renowned Prosecco wine.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629464/italiamo-project/cities/Treviso.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:05.530Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b6"
+  },
+  "name": "Venice",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908d"
+  },
+  "description": "Venezia (Venice) is the capital city of Veneto, Italy, famed for its romantic canals, historic architecture, and vibrant Carnival celebrations.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629467/italiamo-project/cities/Venice.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:07.619Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b7"
+  },
+  "name": "Verona",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908d"
+  },
+  "description": "Verona is a city in Veneto, Italy, known for its well-preserved Roman amphitheater, romantic atmosphere, and association with Shakespeare's Romeo and Juliet.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629468/italiamo-project/cities/Verona.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:08.947Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790b8"
+  },
+  "name": "Vicenza",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7908d"
+  },
+  "description": "Vicenza is a city in Veneto, Italy, celebrated for its Palladian architecture, UNESCO-listed historic center, and vibrant cultural scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629469/italiamo-project/cities/Vicenza.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:10.333Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790bb"
+  },
+  "name": "Trieste",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907f"
+  },
+  "description": "Trieste is the capital city of Friuli-Venezia Giulia, Italy, known for its scenic waterfront, diverse cultural heritage, and cosmopolitan atmosphere.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629471/italiamo-project/cities/Trieste.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:11.935Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790bc"
+  },
+  "name": "Udine",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907f"
+  },
+  "description": "Udine is a city in Friuli-Venezia Giulia, Italy, famed for its historic architecture, vibrant piazzas, and thriving art scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629472/italiamo-project/cities/Udine.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:13.287Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790bd"
+  },
+  "name": "Bologna",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907e"
+  },
+  "description": "Bologna is the capital city of Emilia-Romagna, Italy, renowned for its historic university, rich culinary tradition, and beautiful medieval architecture.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629474/italiamo-project/cities/Bologna.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:14.650Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790bf"
+  },
+  "name": "Ferrara",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907e"
+  },
+  "description": "Ferrara is a city in Emilia-Romagna, Italy, celebrated for its well-preserved Renaissance architecture, charming old town, and cultural events.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629475/italiamo-project/cities/Ferrara.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:15.806Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790c2"
+  },
+  "name": "Parma",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907e"
+  },
+  "description": "Parma is a city in Emilia-Romagna, Italy, renowned for its rich culinary tradition, elegant architecture, and artistic heritage.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629476/italiamo-project/cities/Parma.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:17.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790c4"
+  },
+  "name": "Ravenna",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907e"
+  },
+  "description": "Ravenna is a city in Emilia-Romagna, Italy, famed for its Byzantine mosaics, UNESCO-listed monuments, and vibrant cultural scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629477/italiamo-project/cities/Ravenna.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:18.384Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790c6"
+  },
+  "name": "Rimini",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907e"
+  },
+  "description": "Rimini is a city in Emilia-Romagna, Italy, celebrated for its sandy beaches, Roman ruins, and lively nightlife.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629479/italiamo-project/cities/Rimini.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:19.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790c7"
+  },
+  "name": "Arezzo",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79089"
+  },
+  "description": "Arezzo is a city in Tuscany, Italy, renowned for its medieval architecture, vibrant arts scene, and picturesque countryside.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629481/italiamo-project/cities/Arezzo.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:21.817Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790c9"
+  },
+  "name": "Florence",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79089"
+  },
+  "description": "Firenze (Florence) is the capital city of Tuscany, Italy, renowned for its Renaissance art, iconic landmarks, and rich cultural heritage.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629482/italiamo-project/cities/Florence.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:23.608Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790cc"
+  },
+  "name": "Lucca",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79089"
+  },
+  "description": "Lucca is a city in Tuscany, Italy, celebrated for its well-preserved Renaissance walls, cobblestone streets, and charming piazzas.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629485/italiamo-project/cities/Lucca.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:25.540Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790ce"
+  },
+  "name": "Pisa",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79089"
+  },
+  "description": "Pisa is a city in Tuscany, Italy, famed for its iconic Leaning Tower, historic university, and charming riverside setting.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629486/italiamo-project/cities/Pisa.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:27.015Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790d1"
+  },
+  "name": "Siena",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79089"
+  },
+  "description": "Siena is a city in Tuscany, Italy, famed for its medieval architecture, historic horse race (Palio), and artistic heritage.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629487/italiamo-project/cities/Siena.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:28.363Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790d3"
+  },
+  "name": "Ascoli Piceno",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79083"
+  },
+  "description": "Ascoli Piceno is a city in Marche, Italy, celebrated for its well-preserved historic center, Renaissance architecture, and vibrant street life.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629489/italiamo-project/cities/Ascoli%20Piceno.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:30.299Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790d4"
+  },
+  "name": "Fermo",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79083"
+  },
+  "description": "Fermo is a city in Marche, Italy, known for its medieval architecture, lively piazzas, and scenic views of the surrounding countryside.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629493/italiamo-project/cities/Fermo.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:33.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790d7"
+  },
+  "name": "Urbino",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79083"
+  },
+  "description": "Urbino is a city in Marche, Italy, known for its well-preserved Renaissance architecture, historic university, and artistic heritage.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629497/italiamo-project/cities/Urbino.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:38.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790d8"
+  },
+  "name": "Perugia",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907c"
+  },
+  "description": "Perugia is the capital city of Umbria, Italy, renowned for its medieval architecture, vibrant cultural scene, and delicious chocolates.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629506/italiamo-project/cities/Perugia.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:46.829Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790dd"
+  },
+  "name": "Rome",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79080"
+  },
+  "description": "Roma (Rome) is the capital city of Italy and Lazio region, renowned for its ancient ruins, Vatican City, and vibrant street life.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629508/italiamo-project/cities/Rome.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:48.822Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790df"
+  },
+  "name": "L'Aquila",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907a"
+  },
+  "description": "L'Aquila is the capital city of Abruzzo, Italy, famed for its medieval architecture, Renaissance art, and picturesque mountain landscapes.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713632346/italiamo-project/cities/L%27Aquila.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:54.171Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790e1"
+  },
+  "name": "Pescara",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907a"
+  },
+  "description": "Pescara is a city in Abruzzo, Italy, celebrated for its sandy beaches, vibrant nightlife, and cultural events.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629514/italiamo-project/cities/Pescara.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:55.426Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790e2"
+  },
+  "name": "Teramo",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907a"
+  },
+  "description": "Teramo is a city in Abruzzo, Italy, known for its medieval architecture, scenic landscapes, and delicious cuisine.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629516/italiamo-project/cities/Teramo.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:57.061Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790e3"
+  },
+  "name": "Campobasso",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79084"
+  },
+  "description": "Campobasso is a city in Molise, Italy, renowned for its medieval old town, scenic hilltop location, and traditional cuisine.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629517/italiamo-project/cities/Campobasso.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:11:58.333Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790e6"
+  },
+  "name": "Bari",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79086"
+  },
+  "description": "Bari is the capital city of Apulia, Italy, known for its historic old town, medieval architecture, and vibrant seaside promenade.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629520/italiamo-project/cities/Bari.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:00.966Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790ea"
+  },
+  "name": "Lecce",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79086"
+  },
+  "description": "Lecce is a city in Apulia, Italy, renowned for its Baroque architecture, historic center, and lively cultural scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629525/italiamo-project/cities/Lecce.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:06.439Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790ef"
+  },
+  "name": "Caserta",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79087"
+  },
+  "description": "Caserta is a city in Campania, Italy, renowned for its UNESCO-listed Royal Palace, historic center, and lush gardens.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629527/italiamo-project/cities/Caserta.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:08.190Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790f0"
+  },
+  "name": "Napoli",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79087"
+  },
+  "description": "Napoli (Naples) is the capital city of Campania, Italy, famed for its rich history, art, culture, and mouthwatering Neapolitan cuisine.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629529/italiamo-project/cities/Napoli.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:09.820Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790f1"
+  },
+  "name": "Salerno",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79087"
+  },
+  "description": "Salerno is a city in Campania, Italy, known for its historic center, beautiful seaside promenade, and vibrant nightlife.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629533/italiamo-project/cities/Salerno.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:14.442Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790f2"
+  },
+  "name": "Matera",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907b"
+  },
+  "description": "Matera is a city in Basilicata, Italy, famed for its ancient cave dwellings, historic churches, and stunning Sassi di Matera.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713632340/italiamo-project/cities/Matera.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:22.644Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790f7"
+  },
+  "name": "Reggio Calabria",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907a"
+  },
+  "description": "Reggio Calabria is a city in Calabria, Italy, famed for its stunning seafront promenade, ancient artifacts, and vibrant culture.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629544/italiamo-project/cities/Reggio%20Calabria.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:24.932Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790f9"
+  },
+  "name": "Agrigento",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Agrigento is a city in Sicily, Italy, renowned for its Valley of the Temples, stunning beaches, and rich archaeological heritage.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629546/italiamo-project/cities/Agrigento.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:26.962Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790fb"
+  },
+  "name": "Catania",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Catania is a city in Sicily, Italy, famed for its Baroque architecture, vibrant street markets, and majestic Mount Etna.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713632320/italiamo-project/cities/Catania.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:33.195Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790fd"
+  },
+  "name": "Messina",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Messina is a city in Sicily, Italy, known for its historic landmarks, picturesque harbor, and panoramic views of the Strait of Messina.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629554/italiamo-project/cities/Messina.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:34.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790fe"
+  },
+  "name": "Palermo",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Palermo is the capital city of Sicily, Italy, renowned for its rich history, cultural diversity, and stunning architectural landmarks.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629556/italiamo-project/cities/Palermo.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:37.263Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af790ff"
+  },
+  "name": "Ragusa",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Ragusa is a city in Sicily, Italy, famed for its Baroque architecture, historic center, and delicious Sicilian cuisine.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629559/italiamo-project/cities/Ragusa.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:39.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af79100"
+  },
+  "name": "Syracuse",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Siracusa (Syracuse) is a city in Sicily, Italy, known for its ancient Greek ruins, historic center, and picturesque waterfront.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629560/italiamo-project/cities/Syracuse.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:41.119Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af79101"
+  },
+  "name": "Trapani",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af79088"
+  },
+  "description": "Trapani is a city in Sicily, Italy, celebrated for its historic old town, beautiful beaches, and delicious seafood.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629562/italiamo-project/cities/Trapani.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:42.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af79102"
+  },
+  "name": "Cagliari",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907d"
+  },
+  "description": "Cagliari is the capital city of Sardinia, Italy, known for its historic architecture, scenic harbor, and vibrant cultural scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629564/italiamo-project/cities/Cagliari.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:45.258Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6614ec26743a3cdc8af79106"
+  },
+  "name": "Sassari",
+  "region": {
+    "$oid": "66116c9c743a3cdc8af7907d"
+  },
+  "description": "Sassari is a city in Sardinia, Italy, famed for its historic architecture, lively piazzas, and vibrant cultural scene.",
+  "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629568/italiamo-project/cities/Sassari.jpg",
+  "updatedAt": {
+    "$date": "2024-04-20T16:12:49.713Z"
+  }
+}]

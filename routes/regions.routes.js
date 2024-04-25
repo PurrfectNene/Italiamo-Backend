@@ -6,6 +6,9 @@ const Region= require('../models/Region.model')
 const City = require("../models/City.model");
 const Place = require("../models/Place.model")
 
+const fileUploader = require("../config/cloudinary.config");
+
+
 router.get("/regions", (req, res, next) =>{
 
     Region.find()
@@ -85,5 +88,16 @@ router.get("/regions/:regionId/cities", (req, res, next) => {
         })
         .catch((err) => next(err));
 });
+
+
+router.post("/regions-upload", fileUploader.single("imgUrl"), (req, res, next) => {
+   
+  if (!req.file) {
+      next(new Error("No file uploaded!"));
+      return;
+  }
+
+  res.json({imgUrl: req.file.path}); //"imgUrl" is the ref for front-end
+})
   
 module.exports = router

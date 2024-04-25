@@ -13,6 +13,10 @@ const citySchema = new Schema(
         },
         description: {
             type: String
+        },
+        imageUrl:{
+          type:String,
+          required: true
         }
     },
     {
