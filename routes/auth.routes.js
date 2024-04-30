@@ -37,8 +37,7 @@ router.post("/register", (req, res, next) => {
  User.findOne({ email })
     .then((foundUser) => {
       if (foundUser) {
-        next("User already exists. Please login or signup with new email");
-        return;
+        throw new Error("User already exists. Please login or signup with new email")
       }
 
       const salt = bcrypt.genSaltSync(saltRounds);
@@ -51,8 +50,10 @@ router.post("/register", (req, res, next) => {
       
       })
     .catch(err => {
-      console.log(err);
-      res.status(500).json({ message: "Internal Server Error" })
+
+      next(err.message)
+      //FIXME: how to differentiate from internal errors?
+      //res.status(500).json({ message: "Internal Server Error" })
       return
     });
 });

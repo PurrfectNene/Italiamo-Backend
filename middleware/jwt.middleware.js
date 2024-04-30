@@ -20,6 +20,7 @@ function getTokenFromHeaders (req) {
 }
 
 module.exports = {
-    isAuthenticated
+    isAuthenticated,
+    getTokenFromHeaders
 }
 

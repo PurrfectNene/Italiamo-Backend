@@ -7,6 +7,8 @@ const City = require("../models/City.model")
 const Review = require("../models/Review.model");
 
 const fileUploader = require("../config/cloudinary.config");
+const { isAuthenticated,getTokenFromHeaders } = require('../middleware/jwt.middleware')
+const jwt = require("jsonwebtoken")
 
 router.get("/places", (req, res, next) => {
     Place.find()
@@ -101,22 +103,29 @@ router.delete("/places/:placeId", (req, res, next) => {
         })
 })
 
-router.post('/places/:placeId/reviews', (req, res) => {
-    const { userId, rating, review } = req.body;
-    Review.create({ user: userId, place: req.params.placeId, rating, review })
+router.post('/places/:placeId/reviews', isAuthenticated, (req, res) => {
+    let token = getTokenFromHeaders(req)
+  let payload;
+
+    try{
+      payload = jwt.verify(token, process.env.TOKEN_SECRET)
+    } catch(err){
+      return next(err.mssage)
+    }
+
+    const { rating, review } = req.body;
+    Review.create({ user: payload._id, place: req.params.placeId, rating, review })
       .then(newReview => {
         res.status(201).json(newReview);
       })
       .catch(err => {
         res.status(500).json({ message: err.message });
+        
       });
   });
 
 
-  // Adding reviews here because they are linked with a specific place
-  // need to work on authentication
-  
-  // Get Reviews for a Place
+
   router.get('/places/:placeId/reviews', (req, res) => {
     Review.find({ place: req.params.placeId })
       .then(reviews => {
@@ -127,7 +136,6 @@ router.post('/places/:placeId/reviews', (req, res) => {
       });
   });
   
-  // Get Review by ID
   router.get('/places/:placeId/reviews/:reviewId', (req, res) => {
     Review.findOne({ _id: req.params.reviewId, place: req.params.placeId })
       .then(review => {
@@ -142,7 +150,6 @@ router.post('/places/:placeId/reviews', (req, res) => {
       });
   });
   
-  // Update Review
   router.put('/places/:placeId/reviews/:reviewId', (req, res) => {
     const { rating, review } = req.body;
     Review.findOneAndUpdate({ _id: req.params.reviewId, place: req.params.placeId }, { rating, review }, { new: true })
@@ -154,7 +161,6 @@ router.post('/places/:placeId/reviews', (req, res) => {
       });
   });
   
-  // Delete Review
   router.delete('/places/:placeId/reviews/:reviewId', (req, res) => {
     Review.findOneAndDelete({ _id: req.params.reviewId, place: req.params.placeId })
       .then(() => {
@@ -168,5 +174,18 @@ router.post('/places/:placeId/reviews', (req, res) => {
   module.exports = router;
 
 
+  router.get('/places/:type', (req, res) => {
+    const type = req.params.type;
+  
+    const placesQuery = Place.find({ type });
+  
+    placesQuery
+      .then((places) => {
+        res.json(places);
+      })
+      .catch((err) => {
+        res.status(500).json({ message: err.message });
+      });
+  });
 
 
