@@ -32,6 +32,41 @@ router.get("/regions/:regionId", (req,res,next)=>{
 
 })
 
+router.put("/regions/:regionId", (req, res, next) => {
+  const { regionId } = req.params;
+  const update = ({ name, description, imageUrl } = req.body);
+
+  if (!mongoose.Types.ObjectId.isValid(regionId)) {
+    res.status(400).json({ message: "Specified region id is not valid" });
+    return;
+  }
+
+  Region.findByIdAndUpdate(regionId, update, { new: true })
+    .then((region) => res.json(region))
+    .catch((err) => next(err));
+});
+
+router.delete("/regions/:regionId", (req, res, next) => {
+  const { regionId } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(regionId)) {
+    res.status(400).json({ message: "Specified region id is not valid" });
+    return;
+  }
+
+  Region.findByIdAndDelete(regionId)
+    .then((result) => res.json(result))
+    .catch((err) => next(err));
+});
+
+router.post("/regions", (req, res, next) => {
+  const newRegion = ({ name, description, imageUrl } = req.body);
+
+  Region.create(newRegion)
+    .then((region) => res.json(region))
+    .catch((err) => next(err));
+});
+
 
 router.get("/regions/:regionId/cities", (req, res, next) => {
     const { regionId } = req.params;
