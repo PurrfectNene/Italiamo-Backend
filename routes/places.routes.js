@@ -66,25 +66,19 @@ router.post(
 
 router.put("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
-  const { name, city, description, type, imageUrl } = req.body;
+  const update = ({ name, city, description, type, imageUrl } = req.body);
 
-  City.findById(city)
-    .then((existingCity) => {
-      if (!existingCity) {
-        throw new Error("City not found");
-      }
-
-      return Place.findByIdAndUpdate(
-        placeId,
-        { name, city: existingCity._id, description, type, imageUrl },
-        { new: true }
-      );
-    })
-    .then((updatedPlace) => {
-      if (!updatedPlace) {
+  Place.findById(placeId)
+    .then(async (place) => {
+      if (!place) {
         throw new Error("Place not found");
       }
-      res.json(updatedPlace);
+
+      const updatedPlace = await Place.findByIdAndUpdate(placeId, update, {
+        new: true,
+      });
+
+      return res.json(updatedPlace);
     })
     .catch((error) => {
       next(error);

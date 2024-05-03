@@ -111,10 +111,7 @@ router.put("/cities/:cityId", (req, res, next) => {
   if (!mongoose.Types.ObjectId.isValid(cityId)) {
     return res.status(400).json({ message: "Invalid city ID" });
   }
-  if (!mongoose.Types.ObjectId.isValid(region)) {
-    return res.status(400).json({ message: "Invalid region ID" });
-  }
-
+  
   City.findById(cityId)
     .then((existingCity) => {
       if (!existingCity) {
