@@ -24,84 +24,87 @@ router.get("/places", (req, res, next) => {
 
 
 
-router.post("/places", fileUploader.single("imgUrl"), (req, res, next) => {
-    const { name, city, description, type } = req.body
-    const imgUrl = req.file.path
+router.post("/places", (req, res, next) => {
+  const { name, city, description, type, imageUrl } = req.body;
 
-    City.findOne({ name: city })
-        .then(existingCity => {
-            if (!existingCity) {
-                return res.status(404).json({ message: "City not found" })
-            }
+  City.findOne({ _id: city })
+    .then((existingCity) => {
+      if (!existingCity) {
+        return res.status(404).json({ message: "City not found" });
+      }
 
-            const newPlace = new Place({
-                name,
-                city: existingCity._id,
-                description,
-                type,
-                imgUrl
-            })
+      const newPlace = new Place({
+        name,
+        city: existingCity._id,
+        description,
+        type,
+        imageUrl,
+      });
 
-            return newPlace.save()
-        })
-        .then(savedPlace => {
-            res.status(201).json(savedPlace)
-        })
-        .catch(error => {
-            next(error)
-        })
-})
+      return newPlace.save();
+    })
+    .then((savedPlace) => {
+      res.status(201).json(savedPlace);
+    })
+    .catch((error) => {
+      next(error);
+    });
+});
 
-router.post("/places-upload", fileUploader.single("imgUrl"), (req, res, next) => {
-   
+router.post(
+  "/places-upload",
+  fileUploader.single("imgUrl"),
+  (req, res, next) => {
     if (!req.file) {
-        next(new Error("No file uploaded!"));
-        return;
+      next(new Error("No file uploaded!"));
+      return;
     }
 
-    res.json({imgUrl: req.file.path}); //"imgUrl" is the ref for front-end
-})
-
+    res.json({ imgUrl: req.file.path }); //"imgUrl" is the ref for front-end
+  }
+);
 
 router.put("/places/:placeId", (req, res, next) => {
-    const { placeId } = req.params
-    const { name, city, description, type } = req.body
+  const { placeId } = req.params;
+  const { name, city, description, type, imageUrl } = req.body;
 
-    City.findOne({ name: city })
-        .then(existingCity => {
-            if (!existingCity) {
-                return res.status(404).json({ message: "City not found" })
-            }
+  City.findById(city)
+    .then((existingCity) => {
+      if (!existingCity) {
+        throw new Error("City not found");
+      }
 
-            return Place.findByIdAndUpdate(placeId, { name, city: existingCity._id, description, type }, { new: true })
-        })
-        .then(updatedPlace => {
-            if (!updatedPlace) {
-                return res.status(404).json({ message: "Place not found" })
-            }
-            res.json(updatedPlace)
-        })
-        .catch(error => {
-            next(error)
-        })
-})
-
-
+      return Place.findByIdAndUpdate(
+        placeId,
+        { name, city: existingCity._id, description, type, imageUrl },
+        { new: true }
+      );
+    })
+    .then((updatedPlace) => {
+      if (!updatedPlace) {
+        throw new Error("Place not found");
+      }
+      res.json(updatedPlace);
+    })
+    .catch((error) => {
+      next(error);
+    });
+});
 
 router.delete("/places/:placeId", (req, res, next) => {
-    const { placeId } = req.params;
+  const { placeId } = req.params;
 
-    Place.findByIdAndDelete(placeId)
-        .then(deletedPlace => {
-            if (!deletedPlace) {
-                return res.status(404).json({ message: "Place not found" })
-            }
-            res.status(204).end()
-        })
-        .catch(error => {
-            next(error)
-        })
-})
+  Place.findByIdAndDelete(placeId)
+    .then((deletedPlace) => {
+      if (!deletedPlace) {
+        throw new Error("Place not found");
+      }
+      res.status(204).end();
+    })
+    .catch((error) => {
+      next(error);
+    });
+});
 
 router.post('/places/:placeId/reviews', isAuthenticated, (req, res) => {
     let token = getTokenFromHeaders(req)
