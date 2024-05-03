@@ -27,6 +27,13 @@ router.post('/profile/image',(req,res)=>{
   
 })
 
+router.get('/user/:id',(req,res)=>{
+  User.findById(req.params.id)
+  .then((user)=>{
+    res.json(user)
+  })
+})
+
 module.exports = router;
 
 // /**
