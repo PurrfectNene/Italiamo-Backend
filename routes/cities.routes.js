@@ -42,9 +42,9 @@ router.get("/cities/:cityId/places",(req,res,next)=>{
     const { cityId } = req.params
 
     Place.find({ city: cityId })
-    .populate("city")
-    .then((allPlaces)=>res.json(allPlaces))
-    .catch((err)=> next(err))
+      .populate("city reviews")
+      .then((allPlaces) => res.json(allPlaces))
+      .catch((err) => next(err));
 
 })
 
