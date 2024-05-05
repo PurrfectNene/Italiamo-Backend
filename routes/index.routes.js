@@ -24,7 +24,9 @@ router.post('/profile/image',(req,res)=>{
   .then((updatedUser)=>{
     res.json(updatedUser)
   })
-  
+  .catch(err=>{
+    res.json(err)
+  })
 })
 
 router.get('/user/:id',(req,res)=>{
@@ -32,6 +34,9 @@ router.get('/user/:id',(req,res)=>{
   .populate("favoritesRegions")
   .then((user)=>{
     res.json(user)
+  })
+  .catch(err=>{
+    res.json(err)
   })
 })
 
