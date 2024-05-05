@@ -23,11 +23,13 @@ const citiesRoutes= require("./routes/cities.routes")
 const placesRoutes= require("./routes/places.routes")
 const authRoutes= require('./routes/auth.routes')
 
+
 app.use("/api", indexRoutes);
 app.use("/api", regionRoutes)
 app.use("/api", citiesRoutes)
 app.use("/api", placesRoutes)
 app.use("/auth", authRoutes)
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

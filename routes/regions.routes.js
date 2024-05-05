@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const Region= require('../models/Region.model')
 const City = require("../models/City.model");
 const Place = require("../models/Place.model")
+const User = require("../models/User.model")
 
 const fileUploader = require("../config/cloudinary.config");
 
@@ -132,7 +133,42 @@ router.post("/regions-upload", fileUploader.single("imgUrl"), (req, res, next) =
       return;
   }
 
-  res.json({imgUrl: req.file.path}); //"imgUrl" is the ref for front-end
+  res.json({imgUrl: req.file.path}); 
 })
-  
+
+router.post('/regions/:regionId/favorites', (req, res) => {
+  const { regionId } = req.params;
+  const { userId } = req.body;
+
+  User.findByIdAndUpdate(userId,{$push:{favorites:regionId}},{new:true})
+  .then((user)=>{
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'Region added to favorites successfully' });
+  })
+  .catch(err=>{
+    res.status(500).json(err)
+  })
+ /*  User.findOne({ _id: userId }, (err, user) => {
+    if (err) {
+      console.error('Error finding user:', err);
+      return res.status(500).json({ error: 'An unexpected error occurred' });
+    }
+
+   
+
+    user.favorites.push(regionId);
+    user.save((err) => {
+      if (err) {
+        console.error('Error saving user:', err);
+        return res.status(500).json({ error: 'An unexpected error occurred' });
+      }
+
+      
+    });
+  }); */
+});
+
 module.exports = router

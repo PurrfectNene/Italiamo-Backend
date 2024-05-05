@@ -16,7 +16,19 @@ const userSchema = new Schema(
     },
     imageUrl:{
       type:String
-    }
+    },
+    favoritesRegions: [{
+      type: Schema.Types.ObjectId,
+      ref: "Region"
+    }],
+    favoritesCities: [{
+      type: Schema.Types.ObjectId,
+      ref: "City"
+    }],
+    favoritesPlaces: [{
+      type: Schema.Types.ObjectId,
+      ref: "Place"
+    }]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    

@@ -177,7 +177,7 @@ router.post('/places/:placeId/reviews', isAuthenticated, (req, res) => {
   router.get('/places/:type', (req, res) => {
     const type = req.params.type;
   
-    const placesQuery = Place.find({ type });
+    const placesQuery = Place.find({ type }).populate('city', 'name');
   
     placesQuery
       .then((places) => {
