@@ -24,13 +24,18 @@ router.post('/profile/image',(req,res)=>{
   .then((updatedUser)=>{
     res.json(updatedUser)
   })
-  
+  .catch(err=>{
+    res.json(err)
+  })
 })
 
 router.get('/user/:id',(req,res)=>{
   User.findById(req.params.id)
   .then((user)=>{
     res.json(user)
+  })
+  .catch(err=>{
+    res.json(err)
   })
 })
 
