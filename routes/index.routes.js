@@ -20,6 +20,8 @@ router.post("/upload", fileUploader.single("imageUrl"), (req, res, next) => {
 
 
 router.post('/profile/image',(req,res)=>{
+  console.log(req.body);
+  console.log("HOW?", req.body.imageUrl);
   User.findByIdAndUpdate(req.body._id,{imageUrl:req.body.imageUrl},{new:true})
   .then((updatedUser)=>{
     res.json(updatedUser)
