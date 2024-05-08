@@ -66,6 +66,24 @@ router.post(
   }
 );
 
+
+
+router.get("/places/:placeId", (req, res, next) => {
+  const { placeId } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(placeId)) {
+    res.status(400).json({ message: "Specified place id is not valid" });
+    return;
+  }
+
+  Place.findById(placeId)
+    .populate("city")
+    .then((place) => res.json(place))
+    .catch((err) => next(err));
+});
+
+
+
 router.put("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
   const update = ({ name, city, description, type, imageUrl } = req.body);

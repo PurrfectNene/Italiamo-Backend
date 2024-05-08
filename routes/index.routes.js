@@ -4,6 +4,12 @@ const User = require("../models/User.model");
 const Region = require("../models/Region.model")
 const City = require("../models/City.model")
 const Place = require("../models/Place.model")
+const {
+  isAuthenticated,
+  getTokenFromHeaders,
+} = require("../middleware/jwt.middleware");
+const jwt = require("jsonwebtoken");
+
 
 router.get("/", (req, res, next) => {
   res.json("All good in here");
@@ -16,10 +22,14 @@ router.post("/upload", fileUploader.single("imageUrl"), (req, res, next) => {
     next(new Error("No file uploaded!"));
     return;
   }
-  console.log(req.file)
-  // Get the URL of the uploaded file and send it as a response. 
-  res.json({ fileUrl: req.file.path })
+  console.log(req.file);
+  // Get the URL of the uploaded file and send it as a response.
+  res.json({ fileUrl: req.file.path });
 });
+
+router.post("/profile/image", isAuthenticated, (req, res, next) => {
+  let token = getTokenFromHeaders(req);
+  let payload;
 
 
 router.post('/profile/image',(req,res)=>{
@@ -31,6 +41,26 @@ router.post('/profile/image',(req,res)=>{
     res.json(err)
   })
 })
+
+  try {
+    payload = jwt.verify(token, process.env.TOKEN_SECRET);
+  } catch (err) {
+    return next(err.message);
+  }
+
+  User.findByIdAndUpdate(
+    payload._id,
+    { imageUrl: req.body.imageUrl },
+    { new: true }
+  )
+    .then((updatedUser) => {
+      res.json(updatedUser);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
 
 router.get('/user/:id',(req,res)=>{
   User.findById(req.params.id)
