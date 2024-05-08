@@ -64,13 +64,13 @@ router.post('/profile/image',(req,res)=>{
 
 router.get('/user/:id',(req,res)=>{
   User.findById(req.params.id)
-  .populate("favoritesRegions")
-  .then((user)=>{
-    res.json(user)
-  })
-  .catch(err=>{
-    res.json(err)
-  })
+    .populate("favoritesRegions favoritesCities favoritesPlaces")
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 })
 
 router.get('/users/:userId/favoritesRegions', (req, res) => {
