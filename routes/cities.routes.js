@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const City = require("../models/City.model");
 const Place = require("../models/Place.model")
 const Region = require("../models/Region.model")
+const User = require("../models/User.model")
+
 
 const fileUploader = require("../config/cloudinary.config");
 
@@ -165,6 +167,38 @@ router.delete("/cities/:cityId", (req, res, next) => {
 });
 
 
+router.post('/cities/:cityId/favorites', (req, res) => {
+  const { cityId } = req.params;
+  const { userId } = req.body;
+
+  User.findByIdAndUpdate(userId,{$push:{favoritesCities: cityId}},{new:true})
+  .then((user)=>{
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'City added to favorites successfully' });
+  })
+  .catch(err=>{
+    res.status(500).json(err)
+  })
+});
+
+router.delete('/cities/:cityId/favorites/:userId', (req, res) => {
+  const { cityId, userId } = req.params;
+
+  User.findByIdAndUpdate(userId, { $pull: { favoritesCities: cityId } }, { new: true })
+      .then(user => {
+          if (!user) {
+              return res.status(404).json({ error: 'User not found' });
+          }
+          res.json({ message: 'City removed from favorites successfully' });
+      })
+      .catch(err => {
+          console.error(err);
+          res.status(500).json({ error: 'Server Error' });
+      });
+});
 
 
 

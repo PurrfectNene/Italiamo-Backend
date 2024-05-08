@@ -140,7 +140,7 @@ router.post('/regions/:regionId/favorites', (req, res) => {
   const { regionId } = req.params;
   const { userId } = req.body;
 
-  User.findByIdAndUpdate(userId,{$push:{favorites:regionId}},{new:true})
+  User.findByIdAndUpdate(userId,{$push:{favoritesRegions:regionId}},{new:true})
   .then((user)=>{
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
@@ -151,24 +151,23 @@ router.post('/regions/:regionId/favorites', (req, res) => {
   .catch(err=>{
     res.status(500).json(err)
   })
- /*  User.findOne({ _id: userId }, (err, user) => {
-    if (err) {
-      console.error('Error finding user:', err);
-      return res.status(500).json({ error: 'An unexpected error occurred' });
-    }
-
-   
-
-    user.favorites.push(regionId);
-    user.save((err) => {
-      if (err) {
-        console.error('Error saving user:', err);
-        return res.status(500).json({ error: 'An unexpected error occurred' });
-      }
-
-      
-    });
-  }); */
 });
+
+
+router.delete('/regions/:regionId/favorites/:userId', (req,res) => {
+  const { regionId, userId } = req.params;
+
+  User.findByIdAndUpdate(userId, { $pull: { favoritesRegions: regionId } }, { new: true })
+      .then(user => {
+          if (!user) {
+              return res.status(404).json({ error: 'User not found' });
+          }
+          res.json({ message: 'Region removed from favorites successfully' });
+      })
+      .catch(err => {
+          console.error(err);
+          res.status(500).json({ error: 'Server Error' });
+      });
+})
 
 module.exports = router
