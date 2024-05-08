@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const Place = require("../models/Place.model")
 const City = require("../models/City.model")
 const Review = require("../models/Review.model");
+const User = require("../models/User.model")
+
 
 const fileUploader = require("../config/cloudinary.config");
 const {
@@ -64,6 +66,8 @@ router.post(
   }
 );
 
+
+
 router.get("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
 
@@ -77,6 +81,7 @@ router.get("/places/:placeId", (req, res, next) => {
     .then((place) => res.json(place))
     .catch((err) => next(err));
 });
+
 
 
 router.put("/places/:placeId", (req, res, next) => {
@@ -200,13 +205,12 @@ router.put("/places/:placeId/reviews/:reviewId", (req, res) => {
       });
   });
   
-  module.exports = router;
 
 
   router.get('/places/:type', (req, res) => {
     const type = req.params.type;
   
-    const placesQuery = Place.find({ type });
+    const placesQuery = Place.find({ type }).populate('city', 'name');
   
     placesQuery
       .then((places) => {
@@ -218,3 +222,38 @@ router.put("/places/:placeId/reviews/:reviewId", (req, res) => {
   });
 
 
+  router.post('/places/:placeId/favorites', (req, res) => {
+    const { placeId } = req.params;
+    const { userId } = req.body;
+  
+    User.findByIdAndUpdate(userId,{$push:{favoritesPlaces:placeId}},{new:true})
+    .then((user)=>{
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+  
+      res.status(200).json({ message: 'Region added to favorites successfully' });
+    })
+    .catch(err=>{
+      res.status(500).json(err)
+    })
+  });
+
+  router.delete('/places/:placeId/favorites/:userId', (req, res) => {
+    const { placeId, userId } = req.params;
+
+    User.findByIdAndUpdate(userId, { $pull: { favoritesPlaces: placeId } }, { new: true })
+        .then(user => {
+            if (!user) {
+                return res.status(404).json({ error: 'User not found' });
+            }
+            res.json({ message: 'Place removed from favorites successfully' });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json({ error: 'Server Error' });
+        });
+});
+
+
+  module.exports = router;
