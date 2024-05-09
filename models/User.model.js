@@ -13,7 +13,22 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: [true, 'Password is required.']
-    }
+    },
+    imageUrl:{
+      type:String
+    },
+    favoritesRegions: [{
+      type: Schema.Types.ObjectId,
+      ref: "Region"
+    }],
+    favoritesCities: [{
+      type: Schema.Types.ObjectId,
+      ref: "City"
+    }],
+    favoritesPlaces: [{
+      type: Schema.Types.ObjectId,
+      ref: "Place"
+    }]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    

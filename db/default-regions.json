@@ -1,0 +1,220 @@
+[{
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907a"
+    },
+    "name": "Abruzzo",
+    "description": "Abruzzo is a region in central Italy, known for its mountainous landscape, medieval villages, and Adriatic coastline. The Gran Sasso and Maiella National Parks offer opportunities for outdoor activities such as hiking, skiing, and wildlife viewing. The region's cuisine features hearty dishes like arrosticini (skewered lamb) and pasta dishes like maccheroni alla chitarra.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629251/italiamo-project/regions/Abruzzo.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:32.283Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907b"
+    },
+    "name": "Basilicata",
+    "description": "Basilicata is a region in southern Italy known for its rugged terrain, ancient cave dwellings, and historic towns. The Sassi di Matera, a UNESCO World Heritage Site, features cave dwellings carved into the cliffs. The region's cuisine includes dishes like pasta with peperoncino, lamb, and locally produced cheeses.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629253/italiamo-project/regions/Basilicata.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:33.993Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907c"
+    },
+    "name": "Calabria",
+    "description": "Calabria is a region in southern Italy known for its stunning coastline, rugged mountains, and ancient Greek ruins. The region offers opportunities for outdoor activities such as hiking, swimming, and exploring historic sites like the Riace Bronzes. Calabrian cuisine features fresh seafood, spicy peppers, and pasta dishes.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629254/italiamo-project/regions/Calabria.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:35.720Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907d"
+    },
+    "name": "Campania",
+    "description": "Campania is a region in southern Italy known for its rich history, stunning coastline, and vibrant cities. Naples, the region's capital, is famous for its pizza, historic sites like Pompeii and Herculaneum, and vibrant street life. The Amalfi Coast offers picturesque villages, dramatic cliffs, and crystal-clear waters.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629257/italiamo-project/regions/Campania.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:38.209Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907e"
+    },
+    "name": "Emilia-Romagna",
+    "description": "Emilia-Romagna is a region in northern Italy known for its rich culinary tradition, medieval cities, and beautiful countryside. The region is famous for dishes like prosciutto di Parma, Parmigiano Reggiano cheese, and balsamic vinegar. Cities like Bologna, Modena, and Parma offer historic architecture and cultural attractions.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629672/italiamo-project/regions/Emilia-Romagna.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:32.802Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7907f"
+    },
+    "name": "Friuli-Venezia Giulia",
+    "description": "Friuli-Venezia Giulia is a region in northeastern Italy known for its diverse cultural influences, stunning landscapes, and delicious cuisine. The region's capital, Trieste, is a vibrant port city with a rich history. The region is known for dishes like frico (cheese and potato pancake) and prosciutto di San Daniele.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629673/italiamo-project/regions/Friuli-Venezia%20Giulia.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:33.949Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79080"
+    },
+    "name": "Lazio",
+    "description": "Lazio is a region in central Italy known for its ancient history, stunning architecture, and vibrant culture. Rome, the capital of Italy, is located in Lazio and is home to iconic landmarks like the Colosseum, Vatican City, and Trevi Fountain. The region's cuisine features Roman specialties like carbonara and cacio e pepe.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629259/italiamo-project/regions/Lazio.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:39.784Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79081"
+    },
+    "name": "Liguria",
+    "description": "Liguria is a region in northwestern Italy known for its stunning coastline, picturesque villages, and delicious cuisine. The Cinque Terre, a series of five colorful fishing villages, is a UNESCO World Heritage Site and a popular tourist destination. Ligurian cuisine features dishes like pesto, focaccia, and seafood.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629261/italiamo-project/regions/Liguria.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:42.010Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79082"
+    },
+    "name": "Lombardy",
+    "description": "Lombardy is a region in northern Italy known for its vibrant cities, stunning lakes, and rich cultural heritage. Milan, the region's capital, is a global hub for fashion, design, and finance. The region is also home to Lake Como, Lake Garda, and Lake Maggiore, which offer opportunities for outdoor recreation.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629678/italiamo-project/regions/Lombardy.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:38.528Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79083"
+    },
+    "name": "Marche",
+    "description": "Marche is a region in central Italy known for its picturesque countryside, historic towns, and beautiful coastline. The region offers opportunities for outdoor activities such as hiking, swimming, and exploring medieval villages. Marche's cuisine features dishes like olive ascolane, brodetto (fish stew), and vincisgrassi (lasagna).",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629263/italiamo-project/regions/Marche.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:43.933Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79084"
+    },
+    "name": "Molise",
+    "description": "Molise is a region in southern Italy known for its unspoiled landscapes, charming villages, and rich cultural heritage. The region offers opportunities for outdoor activities such as hiking, skiing, and exploring historic sites. Molise's cuisine features dishes like cavatelli with ragù, scamorza cheese, and taralli (savory biscuits).",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629265/italiamo-project/regions/Molise.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:45.731Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79085"
+    },
+    "name": "Piedmont",
+    "description": "Piedmont is a region in northern Italy known for its stunning landscapes, historic cities, and world-renowned cuisine. The region is famous for dishes like agnolotti, vitello tonnato, and bagna cauda. Piedmont is also home to the Langhe wine region, which produces some of Italy's finest wines.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629683/italiamo-project/regions/Piedmont.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:44.430Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79086"
+    },
+    "name": "Apulia",
+    "description": "Apulia is a region in southern Italy known for its beautiful coastline, historic towns, and delicious cuisine. The region's capital, Bari, is a bustling port city with a rich history. Apulian cuisine features dishes like orecchiette with broccoli rabe, burrata cheese, and seafood specialties.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629685/italiamo-project/regions/Apulia.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:46.459Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79087"
+    },
+    "name": "Sardinia",
+    "description": "Sardinia is a large island off the coast of Italy known for its stunning beaches, rugged interior, and unique culture. The island offers opportunities for outdoor activities such as hiking, snorkeling, and exploring ancient ruins. Sardinian cuisine features dishes like culurgiones (stuffed pasta), porceddu (suckling pig), and pane carasau (crispy flatbread).",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629687/italiamo-project/regions/Sardinia.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:47.909Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79088"
+    },
+    "name": "Sicily",
+    "description": "Sicily is the largest island in the Mediterranean Sea, located off the southern coast of Italy. The island is known for its rich history, stunning landscapes, and vibrant culture. Sicily's cuisine is influenced by various cultures and features dishes like arancini (rice balls), caponata, and cannoli.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629690/italiamo-project/regions/Sicily.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:51.062Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af79089"
+    },
+    "name": "Tuscany",
+    "description": "Tuscany is a region in central Italy known for its beautiful landscapes, historic cities, and rich cultural heritage. Florence, the region's capital, is famous for its Renaissance art and architecture. The region is also known for its wine production, particularly Chianti and Brunello di Montalcino.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629692/italiamo-project/regions/Tuscany.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:52.517Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7908a"
+    },
+    "name": "Trentino-Alto Adige",
+    "description": "Trentino-Alto Adige is a region in northern Italy known for its stunning alpine landscapes, historic cities, and unique blend of Italian and Austrian cultures. The region offers opportunities for outdoor activities such as skiing, hiking, and mountain biking. Trentino-Alto Adige's cuisine features dishes like canederli (dumplings), speck (smoked ham), and strudel.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629693/italiamo-project/regions/Trentino-Alto%20Adige.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:54.487Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7908b"
+    },
+    "name": "Umbria",
+    "description": "Umbria is a region in central Italy known for its picturesque landscapes, historic towns, and artistic heritage. The region's capital, Perugia, is famous for its medieval architecture and chocolate production. Umbrian cuisine features dishes like porchetta, lentil soup, and truffles.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629267/italiamo-project/regions/Umbria.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:48.381Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7908c"
+    },
+    "name": "Valle d'Aosta",
+    "description": "Valle d'Aosta is a region in northwestern Italy known for its stunning alpine scenery, charming villages, and outdoor recreational opportunities. The region offers activities such as skiing, hiking, and mountaineering. Valle d'Aosta's cuisine features dishes like fondue, fontina cheese, and carbonade.",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629699/italiamo-project/regions/Valle%20d%27Aosta.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:14:59.678Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "66116c9c743a3cdc8af7908d"
+    },
+    "name": "Veneto",
+    "description": "Veneto is a region in northeastern Italy known for its historic cities, stunning architecture, and beautiful countryside. Venice, the region's capital, is famous for its canals, historic landmarks, and vibrant carnival celebrations. Veneto's cuisine features dishes like risotto, polenta, and cicchetti (small snacks).",
+    "imageUrl": "https://res.cloudinary.com/dwrndt1iw/image/upload/v1713629269/italiamo-project/regions/Veneto.jpg",
+    "updatedAt": {
+      "$date": "2024-04-20T16:07:49.893Z"
+    }
+  }]
