@@ -207,13 +207,19 @@ router.put("/places/:placeId/reviews/:reviewId", (req, res) => {
   
 
 
-  router.get('/places/:type', (req, res) => {
-    const type = req.params.type;
+  router.get('/places/type/:type', (req, res) => {
+    console.log("rigth route")
+    let type = req.params.type;
+    if(type==="FoodAndWine"){
+      type="Food&Wine"
+    }
+    console.log(req.params.type)
   
     const placesQuery = Place.find({ type }).populate('city', 'name');
   
     placesQuery
       .then((places) => {
+        console.log(places)
         res.json(places);
       })
       .catch((err) => {
