@@ -207,11 +207,11 @@ router.put("/places/:placeId/reviews/:reviewId", (req, res) => {
   
 
 
-  router.get('/places/:type', (req, res) => {
+  router.get("/places/type/:type", (req, res) => {
     const type = req.params.type;
-  
-    const placesQuery = Place.find({ type }).populate('city', 'name');
-  
+
+    const placesQuery = Place.find({ type }).populate("city", "name");
+
     placesQuery
       .then((places) => {
         res.json(places);
