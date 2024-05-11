@@ -9,9 +9,6 @@ const { isAuthenticated } = require("../middleware/jwt.middleware");
 const saltRounds = 10;
 
 router.post("/register", (req, res, next) => {
-
-  // react body:  {identifier: "ace"}
-
   const { email, password } = req.body;
 
   if (email === "" || password === "") {
@@ -34,10 +31,12 @@ router.post("/register", (req, res, next) => {
     return;
   }
 
- User.findOne({ email })
+  User.findOne({ email })
     .then((foundUser) => {
       if (foundUser) {
-        throw new Error("User already exists. Please login or signup with new email")
+        throw new Error(
+          "User already exists. Please login or signup with new email"
+        );
       }
 
       const salt = bcrypt.genSaltSync(saltRounds);
@@ -45,66 +44,61 @@ router.post("/register", (req, res, next) => {
       return User.create({ email, password: hashedPassword });
     })
     .then((createdUser) => {
-      res.status(201).json("Created.")
-      return
-      
-      })
-    .catch(err => {
-
-      next(err.message)
+      res.status(201).json("Created.");
+      return;
+    })
+    .catch((err) => {
+      next(err.message);
       //FIXME: how to differentiate from internal errors?
       //res.status(500).json({ message: "Internal Server Error" })
-      return
+      return;
     });
 });
 
-router.post('/login',(req, res, next)=>{
+router.post("/login", (req, res, next) => {
+  const { email, password } = req.body;
 
-  const { email, password } = req.body
-
-  if (email === '' || password === '') {
-    next( "Provide email and password.")
+  if (email === "" || password === "") {
+    next("Provide email and password.");
     return;
   }
 
   User.findOne({ email })
-  .then((foundUser) => {
-      
-    if (!foundUser) {
-      res.status(401).json({ message: "No account associated with this email. Please sign up" })
-      return;
-    }
+    .then((foundUser) => {
+      if (!foundUser) {
+        res.status(401).json({
+          message: "No account associated with this email. Please sign up",
+        });
+        return;
+      }
 
-    const passwordCorrect = bcrypt.compareSync(password, foundUser.password);
-   
-        if (passwordCorrect) {
+      const passwordCorrect = bcrypt.compareSync(password, foundUser.password);
 
-          const { _id, email,imageUrl } = foundUser;
-          const payload = { _id, email,imageUrl };
-   
-          const authToken = jwt.sign( 
-            payload,
-            process.env.TOKEN_SECRET,
-            { algorithm: 'HS256', expiresIn: "6h" }
-          );
-   
-          res.status(200).json({ authToken: authToken });
-        }
-        else {
-          res.status(401).json({ message: "Unable to authenticate the user" });
-        }
-   
-      })
-      .catch(err => {res.status(500).json(err)
-        console.log(err)});
-  
-})
+      if (passwordCorrect) {
+        const { _id, email, imageUrl, isAdmin } = foundUser;
+        const payload = { _id, email, imageUrl, isAdmin };
 
-router.get('/verify', isAuthenticated, (req, res, next) => {
-  console.log(`req.payload`, req.payload);
+        const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
+          algorithm: "HS256",
+          expiresIn: "6h",
+        });
+
+        res.status(200).json({ authToken: authToken });
+      } else {
+        res.status(401).json({ message: "Unable to authenticate the user" });
+      }
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+      console.log(err);
+    });
+});
+
+router.get("/verify", isAuthenticated, (req, res, next) => {
+  // console.log(`req.payload`, req.payload);
 
   res.status(200).json(req.payload);
-})
+});
 
 
 

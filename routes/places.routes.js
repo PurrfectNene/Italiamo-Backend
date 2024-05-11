@@ -1,12 +1,11 @@
-const express = require('express')
-const router = express.Router()
-const mongoose = require('mongoose')
+const express = require("express");
+const router = express.Router();
+const mongoose = require("mongoose");
 
-const Place = require("../models/Place.model")
-const City = require("../models/City.model")
+const Place = require("../models/Place.model");
+const City = require("../models/City.model");
 const Review = require("../models/Review.model");
-const User = require("../models/User.model")
-
+const User = require("../models/User.model");
 
 const fileUploader = require("../config/cloudinary.config");
 const {
@@ -66,8 +65,6 @@ router.post(
   }
 );
 
-
-
 router.get("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
 
@@ -81,8 +78,6 @@ router.get("/places/:placeId", (req, res, next) => {
     .then((place) => res.json(place))
     .catch((err) => next(err));
 });
-
-
 
 router.put("/places/:placeId", (req, res, next) => {
   const { placeId } = req.params;
@@ -194,72 +189,81 @@ router.put("/places/:placeId/reviews/:reviewId", (req, res) => {
       res.status(500).json({ message: err.message });
     });
 });
-  
-  router.delete('/places/:placeId/reviews/:reviewId', (req, res) => {
-    Review.findOneAndDelete({ _id: req.params.reviewId, place: req.params.placeId })
-      .then(() => {
-        res.json({ message: 'Review deleted' });
-      })
-      .catch(err => {
-        res.status(500).json({ message: err.message });
-      });
-  });
-  
 
-
-  router.get('/places/type/:type', (req, res) => {
-    console.log("rigth route")
-    let type = req.params.type;
-    if(type==="FoodAndWine"){
-      type="Food&Wine"
-    }
-    console.log(req.params.type)
-  
-    const placesQuery = Place.find({ type }).populate('city', 'name');
-  
-    placesQuery
-      .then((places) => {
-        console.log(places)
-        res.json(places);
-      })
-      .catch((err) => {
-        res.status(500).json({ message: err.message });
-      });
-  });
-
-
-  router.post('/places/:placeId/favorites', (req, res) => {
-    const { placeId } = req.params;
-    const { userId } = req.body;
-  
-    User.findByIdAndUpdate(userId,{$push:{favoritesPlaces:placeId}},{new:true})
-    .then((user)=>{
-      if (!user) {
-        return res.status(404).json({ error: 'User not found' });
-      }
-  
-      res.status(200).json({ message: 'Region added to favorites successfully' });
+router.delete("/places/:placeId/reviews/:reviewId", (req, res) => {
+  Review.findOneAndDelete({
+    _id: req.params.reviewId,
+    place: req.params.placeId,
+  })
+    .then(() => {
+      res.json({ message: "Review deleted" });
     })
-    .catch(err=>{
-      res.status(500).json(err)
-    })
-  });
-
-  router.delete('/places/:placeId/favorites/:userId', (req, res) => {
-    const { placeId, userId } = req.params;
-
-    User.findByIdAndUpdate(userId, { $pull: { favoritesPlaces: placeId } }, { new: true })
-        .then(user => {
-            if (!user) {
-                return res.status(404).json({ error: 'User not found' });
-            }
-            res.json({ message: 'Place removed from favorites successfully' });
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({ error: 'Server Error' });
-        });
+    .catch((err) => {
+      res.status(500).json({ message: err.message });
+    });
 });
 
+router.get("/places/type/:type", (req, res) => {
+  console.log("rigth route");
+  let type = req.params.type;
+  if (type === "FoodAndWine") {
+    type = "Food&Wine";
+  }
+  console.log(req.params.type);
 
-  module.exports = router;
+  const placesQuery = Place.find({ type }).populate("city", "name");
+
+  placesQuery
+    .then((places) => {
+      console.log(places);
+      res.json(places);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: err.message });
+    });
+});
+
+router.post("/places/:placeId/favorites", (req, res) => {
+  const { placeId } = req.params;
+  const { userId } = req.body;
+
+  User.findByIdAndUpdate(
+    userId,
+    { $push: { favoritesPlaces: placeId } },
+    { new: true }
+  )
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({ error: "User not found" });
+      }
+
+      res
+        .status(200)
+        .json({ message: "Region added to favorites successfully" });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+router.delete("/places/:placeId/favorites/:userId", (req, res) => {
+  const { placeId, userId } = req.params;
+
+  User.findByIdAndUpdate(
+    userId,
+    { $pull: { favoritesPlaces: placeId } },
+    { new: true }
+  )
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({ error: "User not found" });
+      }
+      res.json({ message: "Place removed from favorites successfully" });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: "Server Error" });
+    });
+});
+
+module.exports = router;

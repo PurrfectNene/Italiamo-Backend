@@ -5,34 +5,44 @@ const userSchema = new Schema(
   {
     email: {
       type: String,
-      required: [true, 'Email is required.'],
+      required: [true, "Email is required."],
       unique: true,
       lowercase: true,
-      trim: true
+      trim: true,
     },
     password: {
       type: String,
-      required: [true, 'Password is required.']
+      required: [true, "Password is required."],
     },
-    imageUrl:{
-      type:String
+    imageUrl: {
+      type: String,
     },
-    favoritesRegions: [{
-      type: Schema.Types.ObjectId,
-      ref: "Region"
-    }],
-    favoritesCities: [{
-      type: Schema.Types.ObjectId,
-      ref: "City"
-    }],
-    favoritesPlaces: [{
-      type: Schema.Types.ObjectId,
-      ref: "Place"
-    }]
+    favoritesRegions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Region",
+      },
+    ],
+    favoritesCities: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "City",
+      },
+    ],
+    favoritesPlaces: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Place",
+      },
+    ],
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`    
-    timestamps: true
+    // this second object adds extra properties: `createdAt` and `updatedAt`
+    timestamps: true,
   }
 );
 
