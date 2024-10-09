@@ -10,11 +10,9 @@ require("dotenv").config();
 const isDev = process.env.NODE_ENV === "development";
 
 // Define the backend URL based on the environment
-const backendUrl = isDev
-  ? `http://localhost:${process.env.PORT}/health`
-  : "https://localhost/health";
+const backendUrl = `http://localhost:${process.env.PORT}/health`
 
-const job = new cron.CronJob("*/5 * * * *", function () {
+const job = new cron.CronJob("*/1 * * * *", function () {
   // This function will be executed every 5 minutes.
   console.log("Keeping the server alive");
 
@@ -22,13 +20,13 @@ const job = new cron.CronJob("*/5 * * * *", function () {
   const client = isDev ? http : https;
 
   // Perform an HTTPS GET request to hit any backend api.
-  client
+  http
     .get(backendUrl, (res) => {
       if (res.statusCode === 200) {
         console.log("Server pinged");
       } else {
         console.error(
-          "failed to ping server with status code: ${res.statusCode}"
+          `failed to ping server with status code: ${res.statusCode}`
         );
       }
     })
