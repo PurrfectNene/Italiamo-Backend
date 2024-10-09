@@ -33,7 +33,7 @@ const job = new cron.CronJob("*/5 * * * *", function () {
       }
     })
     .on("error", (err) => {
-      console.error("Error during ping:", err.message);
+      console.error("Error during ping:", err);
     });
 });
 
