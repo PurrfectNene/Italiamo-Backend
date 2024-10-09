@@ -33,6 +33,10 @@ app.get('/health', (req, res) => {
     res.sendStatus(200); // Sends a 200 OK response
  });
 
+ app.get('/', (req, res) => {
+    res.sendStatus(200); // Sends a 200 OK response
+ });
+ 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
