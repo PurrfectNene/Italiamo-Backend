@@ -18,20 +18,28 @@ require("./config")(app);
 const { isAuthenticated } = require("./middleware/jwt.middleware");
 
 const indexRoutes = require("./routes/index.routes");
-const regionRoutes= require("./routes/regions.routes")
-const citiesRoutes= require("./routes/cities.routes")
-const placesRoutes= require("./routes/places.routes")
-const authRoutes= require('./routes/auth.routes')
-
+const regionRoutes = require("./routes/regions.routes");
+const citiesRoutes = require("./routes/cities.routes");
+const placesRoutes = require("./routes/places.routes");
+const authRoutes = require("./routes/auth.routes");
 
 app.use("/api", indexRoutes);
-app.use("/api", regionRoutes)
-app.use("/api", citiesRoutes)
-app.use("/api", placesRoutes)
-app.use("/auth", authRoutes)
-
+app.use("/api", regionRoutes);
+app.use("/api", citiesRoutes);
+app.use("/api", placesRoutes);
+app.use("/auth", authRoutes);
+// Health Check Route
+app.get('/health', (req, res) => {
+    res.sendStatus(200); // Sends a 200 OK response
+ });
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
+//On main page
+const job = require("./cron.js");
+//Start the cron job
+job.start();
+
 module.exports = app;
+
